@@ -2,7 +2,7 @@
 #include <string.h>						// strlen() and strcmp() functions
 #include <stdbool.h>					// bool data type
 #include <ctype.h>						// tolower() and isalpha() functions
-#include "CCRSFinalProgramHeader.h"
+#include "SearchAndCompare.h"
 
 /*
 ***************************************************************

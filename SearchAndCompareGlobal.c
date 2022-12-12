@@ -1,5 +1,5 @@
 #include <stdbool.h>
-#include "CCRSFinalProgramHeader.h"
+#include "SearchAndCompare.h"
 
 /****************** Define Global Variables **************************/
 

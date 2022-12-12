@@ -1,4 +1,4 @@
-#include "CCRSFinalProgramHeader.h"								// Need to include for use of global variables
+#include "SearchAndCompare.h"								// Need to include for use of global variables
 
 /************** All functions declared in CCFinalProgramHead.h are defined here *******/
 /**************** CCFinalProgramHead.h header file function definitions ***************/

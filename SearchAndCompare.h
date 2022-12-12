@@ -20,9 +20,9 @@ extern int debugCycle;                     // Used for debugging. Counts number 
 extern bool debug;                         // Turn debug on and off	
 
 // Define Function Prototypes
-#ifndef CCFinalProgramHeader_h
+#ifndef SearchAndCompare_h
 
-#define CCFinalProgramHeader_h								
+#define SearchAndCompare_h								
 void textFileToArray(FILE *, char words[500][20]);          // Assigns contents of *.txt files to 2-dimensional array.  Call on function in main.  Pass by address the fptr and words variables.
 void singleCaseArray(char words[500][20]);                  // Changes characters in array to single case (lower). Call on function in main.  Pass by address the words variable.
 void parseWords(char words[500][20]);	                    // Removes punctuation from array. Call on function in main.  Pass by address the words variable.							
