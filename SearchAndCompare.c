@@ -6,7 +6,7 @@
 
 /*
 ***************************************************************
- Program Name: CCFinalProgram.c
+ Program Name: SearchAndCompare.c
  This program reads and scan contents of text file into separate 2-dimensional arrays.  The program changes the case of array to lowercase, and, if applicable, parses and sorts the array.  The program then checks to see if each word on a separate list, Reserved Word List, is on our initial block of text via a binary search.  The code will output any word in the block of text that's not in the reserved word on a new line.
  Variables:  
 	Characters:
@@ -31,7 +31,7 @@
 	  debug 	 - Used to turn debug prints on and off.  Boolean data type.  Value of true will turn debug on.  Value of zero will turn them off.
 	File Pointer:
 	  fptr - Open external files.
-	Functions included in "CCRSFinalProgramHeader.h"
+	Functions included in "SearchAndCompare.h"
 	  textFileToArray - Assigns contents of *.txt files to 2-dimensional array.  Call on function in main.  Pass by address the fptr and words variables.
 	  singleCaseArray - Changes characters in array to single case (lower). Call on function in main.  Pass by address the words variable.
 	  parseWords      - Removes punctuation from array. Call on function in main.  Pass by address the words variable.							
@@ -69,7 +69,7 @@ int main()
 
 	/*********************************** Prepare block of text for binary search **********************************************/
 
-	fptr = fopen("FinalExamFileToParseSearch.txt", "r");			// Make sure this matches external file.
+	fptr = fopen("FileToParseSearch.txt", "r");			// Make sure this matches external file.
 	textFileToArray(fptr, words);					// Order matters.  This function needs to be placed directly after fptr assignment.
 	singleCaseArray(words);							// Change to single case, so we're comparing apples to apples in binary search.
 	parseWords(words);								// Remove all punctuation, except for apostrophes and hyphens (just in case)
@@ -102,7 +102,7 @@ int main()
 	
 	/*********************************** Prepare reserved word list for binary search **********************************************/
 	
-	fptr = fopen("FinalExamReserveWordList.txt", "r");		// Make sure this matches external file.
+	fptr = fopen("ReserveWordList.txt", "r");		// Make sure this matches external file.
 	textFileToArray(fptr, words);					// Order matters.  This function needs to be placed directly after fptr assignment.
 	singleCaseArray(words);							// Change to single case, so we're comparing apples to apples in binary search.					
 	rockSort(words, tempW);							// Words will be sorted in alphabetical order.  Enables us to use binary search later in program.
